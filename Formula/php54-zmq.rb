@@ -7,6 +7,7 @@ class Php54Zmq < AbstractPhp54Extension
   head 'https://github.com/mkoppanen/php-zmq.git'
 
   depends_on 'autoconf' => :build
+  depends_on 'pkg-config'
   depends_on 'php54' if build.include?('--with-homebrew-php') && !Formula.factory('php54').installed?
 
   def install
